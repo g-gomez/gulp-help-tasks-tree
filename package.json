@@ -1,6 +1,6 @@
 {
   "name": "gulp-help-tasks-tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Display help for gulp with options and the tasks tree.",
   "main": "index.js",
   "scripts": {
