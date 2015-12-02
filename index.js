@@ -96,28 +96,28 @@ module.exports = function (opts) {
 
     var getPrintableOptionsTable = function (options) {
         var lines = [];
-        _.each(options, function (definition, name) {
+        _.each(options, function (option) {
             lines.push('');
-            var taskName = chalk.bold('  --' + chalk.magenta(name));
-            if (definition.alias) {
-                taskName += ' or (' + chalk.magenta(definition.alias) + ')';
+            var taskName = chalk.bold('  --' + chalk.magenta(option.name));
+            if (option.alias) {
+                taskName += ' or (' + chalk.magenta(option.alias) + ')';
             }
-            if (definition.type) {
-                var type = _.isArray(definition.type) ? definition.type.join('|') : definition.type;
+            if (option.type) {
+                var type = _.isArray(option.type) ? option.type.join('|') : option.type;
                 taskName += '  [' + type + ']';
             }
-            lines.push([taskName, definition.description ? definition.description : '']);
+            lines.push([taskName, option.description ? option.description : '']);
 
-            if (definition.tasks) {
-                var tasks = _.isArray(definition.tasks) ? definition.tasks.join(', ') : definition.tasks;
+            if (option.tasks) {
+                var tasks = _.isArray(option.tasks) ? option.tasks.join(', ') : option.tasks;
                 lines.push(chalk.gray('    Tasks: ' + tasks));
             }
-            if (definition.values) {
-                var values = _.isArray(definition.values) ? definition.values.join(', ') : definition.values;
+            if (option.values) {
+                var values = _.isArray(option.values) ? option.values.join(', ') : option.values;
                 lines.push(chalk.gray('    Possible values: ' + values));
             }
-            if (definition.default) {
-                lines.push(chalk.gray('    Default value: ' + definition.default));
+            if (option.default) {
+                lines.push(chalk.gray('    Default value: ' + option.default));
             }
         });
         return lines;
