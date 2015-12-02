@@ -75,7 +75,8 @@ module.exports = function (opts) {
 
             if (!prefix) {
                 lines.push('');
-                taskName = chalk.bold(defaultTask ? chalk.magenta(taskName) : chalk.cyan(taskName));
+                taskName = chalk.bold(taskName);
+                taskName = defaultTask ? chalk.magenta(taskName + ' (default task)') : chalk.cyan(taskName);
                 taskDescription = chalk.bold(defaultTask ? chalk.magenta(taskDescription) : chalk.cyan(taskDescription));
             }
 
