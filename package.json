@@ -1,0 +1,34 @@
+{
+  "name": "gulp-help-tasks-tree",
+  "version": "1.0.0",
+  "description": "Display help for gulp with options and the tasks tree.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-gomez/gulp-help-tasks-tree.git"
+  },
+  "keywords": [
+    "gulp",
+    "help",
+    "tasks",
+    "tree",
+    "list",
+    "listing",
+    "description"
+  ],
+  "author": "Guillaume Gomez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g-gomez/gulp-help-tasks-tree/issues"
+  },
+  "homepage": "https://github.com/g-gomez/gulp-help-tasks-tree#readme",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "esprima": "^2.7.0",
+    "lodash": "^3.10.1",
+    "through2": "^2.0.0"
+  }
+}
