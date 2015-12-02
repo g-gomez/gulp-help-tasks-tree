@@ -1,7 +1,7 @@
 {
   "name": "gulp-help-tasks-tree",
   "version": "1.0.1",
-  "description": "Display help for gulp with options and the tasks tree.",
+  "description": "Display help for gulp with options and tasks tree.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
